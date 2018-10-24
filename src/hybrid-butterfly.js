@@ -121,8 +121,8 @@ export function render(component, DOM) {
   if (typeof component === 'function') {
     let componentInstance
     componentInstance = new component()
-    GLOBALS.appInstance = componentInstance
     if (!componentInstance._isHybridButterflyComponent) throw new Error(`${component.name} must extend Component`)
+    window.hybridButterfly.appInstance = componentInstance
     let lexer = new Lexer()
     let vnt = new VNT()
     if (!DOM || !(DOM && DOM.appendChild)) throw new Error(`render second argument must be a DOM element`)

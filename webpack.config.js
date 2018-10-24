@@ -1,12 +1,15 @@
 const join = require('path').join
 var include = join(__dirname, 'src')
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    hybridButterfly: './src/index.js',
+    hybridButterflyRouter: './src/router.js'
+  },
   output: {
-    filename: 'index.min.js',
+    filename: '[name].js',
     path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'hybridButterfly'
+    library: '[name]'
   },
   mode: 'production',
   module: {
