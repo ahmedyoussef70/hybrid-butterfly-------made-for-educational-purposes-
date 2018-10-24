@@ -89,7 +89,7 @@ function diff(vnode, dom, parent) {
       if (vnode.rawValue === dom._tag) {
         if (vnode.component && dom._component) {
           if (vnode.component.constructor.name === dom._component.constructor.name) {
-            dom._component = Object.assign(vnode.component, dom._component)
+            dom._component = Object.assign(dom._component, vnode.component)
             dom._component._setDOM(dom)
           } else {
             return replaceDomWithVnode(vnode, dom, parent)
