@@ -1,12 +1,15 @@
-const path = require('path')
-
+const join = require('path').join
+var include = join(__dirname, 'src')
 module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'index.min.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: join(__dirname, 'dist'),
     libraryTarget: 'umd',
     library: 'hybridButterfly'
   },
-  mode: 'production'
+  mode: 'production',
+  module: {
+    rules: [{ test: /\.js$/, loader: 'babel-loader', include }]
+  }
 }
