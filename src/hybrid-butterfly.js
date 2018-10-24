@@ -133,23 +133,44 @@ export function render(component, DOM) {
   throw new Error(`render first argument must be a class/constructor`)
 }
 
-export class Component {
-  constructor() {
-    this.components = {}
-    this._isHybridButterflyComponent = true
-  }
-  updateView() {
-    let lexer = new Lexer()
-    let vnt = new VNT()
-    let template = this.template()
-    let vNodes = vnt.build(lexer.lex(template, this, this.constructor.name))
-    diff(vNodes, this.DOM, this.DOM.parentNode)
-    clearDidMounts()
-  }
-  _setRouterMatch(match) {
-    this.routerMatch = match
-  }
-  _setDOM(DOM) {
-    this.DOM = DOM
-  }
+// export class Component {
+//   constructor() {
+//     this.components = {}
+//     this._isHybridButterflyComponent = true
+//   }
+//   updateView() {
+//     let lexer = new Lexer()
+//     let vnt = new VNT()
+//     let template = this.template()
+//     let vNodes = vnt.build(lexer.lex(template, this, this.constructor.name))
+//     diff(vNodes, this.DOM, this.DOM.parentNode)
+//     clearDidMounts()
+//   }
+//   _setRouterMatch(match) {
+//     this.routerMatch = match
+//   }
+//   _setDOM(DOM) {
+//     this.DOM = DOM
+//   }
+// }
+
+export function Component() {
+  this.components = {}
+  this._isHybridButterflyComponent = true
+}
+Component.prototype.updateView = function() {
+  let lexer = new Lexer()
+  let vnt = new VNT()
+  let template = this.template()
+  let vNodes = vnt.build(lexer.lex(template, this, this.constructor.name))
+  diff(vNodes, this.DOM, this.DOM.parentNode)
+  clearDidMounts()
+}
+
+Component.prototype._setRouterMatch = function(match) {
+  this.routerMatch = match
+}
+
+Component.prototype._setDOM = function(DOM) {
+  this.DOM = DOM
 }
