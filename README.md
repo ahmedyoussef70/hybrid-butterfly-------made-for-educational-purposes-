@@ -17,8 +17,6 @@ a lightweight library for building UI on the web with a unique but simple syntax
 
 [Tour of Heroes (a remake of the original angular example)](https://codesandbox.io/s/6yklz7xmzr)
 
-### hybrid-butterfly is making use of the main [butterfly-template](https://github.com/ahmedyoussef70/butterfly-template)'s building blocks.
-
 ## What exactly did hybrid-butterfly add to [butterfly-template](https://github.com/ahmedyoussef70/butterfly-template) ?
 
 - Components/Contexts
