@@ -19,9 +19,8 @@ a lightweight library for building UI on the web with a unique but simple syntax
 
 ## What exactly did hybrid-butterfly add to [butterfly-template](https://github.com/ahmedyoussef70/butterfly-template) ?
 
-- Components/Contexts
-
-  with 2 lifecycle hooks `didMount` `willUnmount`
+- Components/Contexts with 2 lifecycle hooks `didMount` `willUnmount`
+#### every component should return one element (like react.js)
 
 ```js
 class HelloWorld extends Component {
