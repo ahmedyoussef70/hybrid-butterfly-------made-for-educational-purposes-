@@ -7,7 +7,7 @@ a lightweight library for building UI on the web with a unique but simple syntax
 - CDN
 
 ```js
-<script src="https://cdn.jsdelivr.net/gh/ahmedyoussef70/hybrid-butterfly@latest/dist/hybridButterfly.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ahmedyoussef70/hybrid-butterfly@0.0.4/dist/hybridButterfly.js"></script>
 <script>
   const { Component, render } = window.hybridButterfly;
 </script>
