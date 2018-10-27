@@ -17,12 +17,10 @@ a lightweight library for building UI on the web with a unique but simple syntax
 
 [Tour of Heroes (a remake of the original angular example)](https://codesandbox.io/s/6yklz7xmzr)
 
-### hybrid-butterfly is making use of the main [butterfly-template](https://github.com/ahmedyoussef70/butterfly-template)'s building blocks.
-
 ## What exactly did hybrid-butterfly add to [butterfly-template](https://github.com/ahmedyoussef70/butterfly-template) ?
 
-- Components/Contexts
-  with 2 lifecycle hooks `didMount` `willUnmount`
+- Components/Contexts with 2 lifecycle hooks `didMount` `willUnmount`
+#### note: every component should return one element (like react.js)
 
 ```js
 class HelloWorld extends Component {
@@ -49,11 +47,12 @@ class HelloWorld extends Component {
 ```
 
 - If/For Exp.
-  for loops also has some special vars in its scope: `counter` `even` `odd`
 
-  _counter_ is a number starting from 0
+for loops also has some special vars in its scope: `counter` `even` `odd`
 
-  _even_ and _odd_ are booleans
+_counter_ is a number starting from 0
+
+_even_ and _odd_ are booleans
 
 ```js
 class HelloWorld extends Component {
@@ -75,7 +74,8 @@ class HelloWorld extends Component {
 ```
 
 - Components Resolving
-  1 - dependencies components must be registered in components property, and then used in the template as a tag
+
+1 - dependencies components must be registered in components property, and then used in the template as a tag
 
 ```js
 class XComponent extends Component {
