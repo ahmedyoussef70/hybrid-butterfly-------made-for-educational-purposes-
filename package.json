@@ -1,8 +1,8 @@
 {
   "name": "hybrid-butterfly",
-  "version": "1.0.0",
+  "version": "v0.0.4",
   "description": "a lightweight library for building UI on the web with a unique but simple syntax",
-  "main": "src/index.js",
+  "main": "build/hybridButterfly.js",
   "scripts": {
     "build": "webpack"
   },
